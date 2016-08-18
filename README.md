@@ -1,5 +1,5 @@
 # SimpleRandom
-随机数生成模块
+**随机数生成模块**
 
 SimpleRandomPkg.sv  随机数类包
 
@@ -13,27 +13,19 @@ Exp:
 
 2）、随机数从这10个数中抽取。
 
+```systemverilog
 simple_random #(
-
     .BEGIN_VALUE   (0          ),  //开始的数
-    
     .END_VALUE     (100        ),  //结尾的数
-    
     .SPLIT         (10         ),  //把0-100分成几段
-    
     .NUM           (1          ),  //需要多少随机数
-    
     .DSIZE         (8          )   // 随机数位宽
-    
 )simple_random_inst(
-
     .clock          (clock  ),
-    
     .rand_data      (       )    // output [NUM*DSIZE-1:0]随机数输出
-    
 );
-
+```
 Have fun !!!
 
---@--Young--@--
+**--@--Young--@--**
 
